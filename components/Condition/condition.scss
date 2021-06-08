@@ -1,0 +1,150 @@
+.condition {
+  padding: 20px;
+  position: relative;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__and {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    filter: brightness(0.9);
+  }
+
+  &__or {
+    width: 50px;
+    height: 30px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    filter: contrast(1) brightness(0.9);
+  }
+
+  &__next {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background-color: #eee;
+    border-radius: 6px;
+  }
+
+  &__title {
+    filter: contrast(1.3);
+  }
+
+  &__left  {
+    width: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__add {
+    background-color: #fff;
+    padding: 10px 10px 10px 25px;
+    border: 2px solid #4caf50;
+    color: #4caf50;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background-image: url("/plus.svg");
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      background-repeat: no-repeat;
+      left: 10px;
+      top: 11px;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    &.type {
+      width: 60%;
+    }
+  }
+
+  &__range {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__inputs{
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  span {
+    margin-right: 10px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  &__footer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__delete {
+    background-color: #fff;
+    padding: 10px 10px 10px 35px;
+    border: 2px solid #D84315;
+    color: #D84315;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url("/delete.svg");
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      background-repeat: no-repeat;
+      left: 10px;
+      top: 7px;
+    }
+  }
+}

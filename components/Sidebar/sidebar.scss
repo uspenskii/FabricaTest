@@ -1,0 +1,46 @@
+.sidebar {
+  $this: &;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 10px;
+
+  &__item {
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border: 1px solid #4caf50;
+      #{$this}__name {
+        color: #4caf50;
+      }
+      #{$this}__icon {
+        filter: contrast(1);
+      }
+    }
+
+    &.nuxt-link-active {
+      background-color: #eceff1;
+    }    
+  }
+
+  &__icon {
+    width: 50px;
+    filter: contrast(0);
+  }
+
+  &__name {
+    color: black;
+    font-size: 18px;
+  }
+}
